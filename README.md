@@ -58,7 +58,7 @@ sakila-rental-analytics/
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/sakila-rental-analytics.git
+git clone https://github.com/Alibaligh03/sakila-rental-analytics.git
 cd sakila-rental-analytics
 ```
 
