@@ -72,7 +72,6 @@ Place your Google service account JSON key in the project root and update the pa
 ```python
 creds_path = "your-service-account-key.json"
 ```
-> ⚠️ Never commit your credentials file. It is excluded by `.gitignore`.
 
 ### 4. Google Sheet ID
 The sheet ID is already hardcoded in `sakila_reporting.py`:
