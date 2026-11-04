@@ -1,4 +1,4 @@
-pandas
-numpy
-gspread
-google-auth
+pandas>=2.0
+numpy>=1.24
+gspread>=6.0
+google-auth>=2.20

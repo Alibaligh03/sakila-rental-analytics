@@ -1,18 +1,25 @@
-# Google service account credentials — NEVER commit this
+# Credentials: never commit these
+.env
 *.json
+!tests/golden/*.json
+service-account*
+*-key.json
 
-# macOS
-.DS_Store
-__MACOSX/
+# Pipeline output and cache (regenerated on every run)
+output/
+.query_cache/
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
-.env
 venv/
 .venv/
+.pytest_cache/
+.ruff_cache/
 
-# IDE
+# OS / IDE
+.DS_Store
+__MACOSX/
 .vscode/
 .idea/
