@@ -1,0 +1,3155 @@
+{
+ "Overview": {
+  "clear_ranges": [
+   "W3:AA"
+  ],
+  "skipped": [],
+  "updates": [
+   {
+    "range": "A1",
+    "values": [
+     [
+      "Summary of Business"
+     ]
+    ]
+   },
+   {
+    "range": "B3",
+    "values": [
+     [
+      "KPI"
+     ]
+    ]
+   },
+   {
+    "range": "C3",
+    "values": [
+     [
+      "Value"
+     ]
+    ]
+   },
+   {
+    "range": "B4",
+    "values": [
+     [
+      "Total Revenue"
+     ]
+    ]
+   },
+   {
+    "range": "B5",
+    "values": [
+     [
+      "Total Payments"
+     ]
+    ]
+   },
+   {
+    "range": "B6",
+    "values": [
+     [
+      "Avg Payment"
+     ]
+    ]
+   },
+   {
+    "range": "B7",
+    "values": [
+     [
+      "Total Rentals"
+     ]
+    ]
+   },
+   {
+    "range": "B8",
+    "values": [
+     [
+      "Total Customers"
+     ]
+    ]
+   },
+   {
+    "range": "B9",
+    "values": [
+     [
+      "Active Customers"
+     ]
+    ]
+   },
+   {
+    "range": "B10",
+    "values": [
+     [
+      "Total Films"
+     ]
+    ]
+   },
+   {
+    "range": "B11",
+    "values": [
+     [
+      "Currently Unreturned"
+     ]
+    ]
+   },
+   {
+    "range": "B12",
+    "values": [
+     [
+      "Last Updated"
+     ]
+    ]
+   },
+   {
+    "range": "A14",
+    "values": [
+     [
+      "Monthly Report"
+     ]
+    ]
+   },
+   {
+    "range": "A23",
+    "values": [
+     [
+      "Days Insights"
+     ]
+    ]
+   },
+   {
+    "range": "A34",
+    "values": [
+     [
+      "Returns Tracking"
+     ]
+    ]
+   },
+   {
+    "range": "B36",
+    "values": [
+     [
+      "KPI"
+     ]
+    ]
+   },
+   {
+    "range": "C36",
+    "values": [
+     [
+      "Value"
+     ]
+    ]
+   },
+   {
+    "range": "B37",
+    "values": [
+     [
+      "Late Returns count"
+     ]
+    ]
+   },
+   {
+    "range": "B38",
+    "values": [
+     [
+      "Avg Days Overdue"
+     ]
+    ]
+   },
+   {
+    "range": "C4",
+    "values": [
+     [
+      67416.50999999208
+     ]
+    ]
+   },
+   {
+    "range": "C5",
+    "values": [
+     [
+      16049
+     ]
+    ]
+   },
+   {
+    "range": "C6",
+    "values": [
+     [
+      4.2006673312974065
+     ]
+    ]
+   },
+   {
+    "range": "C7",
+    "values": [
+     [
+      16044
+     ]
+    ]
+   },
+   {
+    "range": "C8",
+    "values": [
+     [
+      599
+     ]
+    ]
+   },
+   {
+    "range": "C9",
+    "values": [
+     [
+      584
+     ]
+    ]
+   },
+   {
+    "range": "C10",
+    "values": [
+     [
+      1000
+     ]
+    ]
+   },
+   {
+    "range": "C11",
+    "values": [
+     [
+      183
+     ]
+    ]
+   },
+   {
+    "range": "C12",
+    "values": [
+     [
+      "2026-01-15 12:00:00"
+     ]
+    ]
+   },
+   {
+    "range": "B16",
+    "values": [
+     [
+      "Month",
+      "2006-02",
+      "2005-08",
+      "2005-07",
+      "2005-06",
+      "2005-05"
+     ],
+     [
+      "Revenue",
+      514.180000000001,
+      24070.14000000216,
+      28368.91000000378,
+      9629.88999999961,
+      4823.439999999861
+     ],
+     [
+      "Number of Payments",
+      182,
+      5686,
+      6709,
+      2311,
+      1156
+     ],
+     [
+      "Financially Active Customers",
+      158,
+      599,
+      599,
+      590,
+      520
+     ],
+     [
+      "Unique Films Rented",
+      168,
+      958,
+      958,
+      900,
+      686
+     ],
+     [
+      "Currently Unreturned",
+      182,
+      1,
+      0,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "range": "B25",
+    "values": [
+     [
+      "Day of Week",
+      "Total Rentals"
+     ],
+     [
+      "Sunday",
+      2320
+     ],
+     [
+      "Monday",
+      2247
+     ],
+     [
+      "Tuesday",
+      2463
+     ],
+     [
+      "Wednesday",
+      2231
+     ],
+     [
+      "Thursday",
+      2200
+     ],
+     [
+      "Friday",
+      2272
+     ],
+     [
+      "Saturday",
+      2311
+     ]
+    ]
+   },
+   {
+    "range": "C37",
+    "values": [
+     [
+      8121
+     ]
+    ]
+   },
+   {
+    "range": "C38",
+    "values": [
+     [
+      2.488854085429521
+     ]
+    ]
+   },
+   {
+    "range": "J1",
+    "values": [
+     [
+      "Staff Performance"
+     ]
+    ]
+   },
+   {
+    "range": "K3",
+    "values": [
+     [
+      "Staff Member",
+      "Store",
+      "Rentals Handled",
+      "Revenue Collected",
+      "Avg Transaction Value"
+     ],
+     [
+      "Jon Stephens",
+      "Store 2",
+      8004,
+      33881.94000000493,
+      4.2331259370321
+     ],
+     [
+      "Mike Hillyer",
+      "Store 1",
+      8040,
+      33524.62000000502,
+      4.169728855722018
+     ]
+    ]
+   },
+   {
+    "range": "J8",
+    "values": [
+     [
+      "Late Return Rate by Category"
+     ]
+    ]
+   },
+   {
+    "range": "K10",
+    "values": [
+     [
+      "Category",
+      "Late Returns",
+      "Total Returns",
+      "Late Return Rate (%)"
+     ],
+     [
+      "Sports",
+      648,
+      1164,
+      0.5567010309278351
+     ],
+     [
+      "Comedy",
+      512,
+      932,
+      0.5493562231759657
+     ],
+     [
+      "New",
+      509,
+      927,
+      0.5490830636461704
+     ],
+     [
+      "Documentary",
+      571,
+      1043,
+      0.5474592521572388
+     ],
+     [
+      "Games",
+      512,
+      955,
+      0.5361256544502618
+     ],
+     [
+      "Sci-Fi",
+      583,
+      1093,
+      0.5333943275388838
+     ],
+     [
+      "Horror",
+      438,
+      834,
+      0.5251798561151079
+     ],
+     [
+      "Action",
+      554,
+      1095,
+      0.5059360730593607
+     ],
+     [
+      "Family",
+      543,
+      1083,
+      0.5013850415512465
+     ],
+     [
+      "Animation",
+      574,
+      1145,
+      0.5013100436681223
+     ],
+     [
+      "Foreign",
+      504,
+      1022,
+      0.4931506849315068
+     ],
+     [
+      "Classics",
+      458,
+      930,
+      0.4924731182795699
+     ],
+     [
+      "Music",
+      399,
+      819,
+      0.48717948717948717
+     ],
+     [
+      "Children",
+      457,
+      939,
+      0.48668796592119273
+     ],
+     [
+      "Drama",
+      506,
+      1053,
+      0.4805318138651472
+     ],
+     [
+      "Travel",
+      353,
+      827,
+      0.4268440145102781
+     ]
+    ]
+   },
+   {
+    "range": "Q1",
+    "values": [
+     [
+      "Top 20 Films by Rentals per Copy"
+     ]
+    ]
+   },
+   {
+    "range": "Q3",
+    "values": [
+     [
+      "Film Title",
+      "Category",
+      "Copies in Stock",
+      "Total Rentals",
+      "Rentals per Copy"
+     ],
+     [
+      "LOVE SUICIDES",
+      "Horror",
+      4,
+      20,
+      5.0
+     ],
+     [
+      "ANTHEM LUKE",
+      "Comedy",
+      3,
+      15,
+      5.0
+     ],
+     [
+      "HUNTING MUSKETEERS",
+      "Family",
+      3,
+      15,
+      5.0
+     ],
+     [
+      "SCISSORHANDS SLUMS",
+      "Foreign",
+      3,
+      15,
+      5.0
+     ],
+     [
+      "SHREK LICENSE",
+      "Foreign",
+      3,
+      15,
+      5.0
+     ],
+     [
+      "SWEET BROTHERHOOD",
+      "Travel",
+      3,
+      15,
+      5.0
+     ],
+     [
+      "ANTITRUST TOMATOES",
+      "Action",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "BLOOD ARGONAUTS",
+      "Family",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "ELIZABETH SHANE",
+      "Sports",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "GONE TROUBLE",
+      "Drama",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "GRAIL FRANKENSTEIN",
+      "Action",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "HALLOWEEN NUTS",
+      "Documentary",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "HOLLOW JEOPARDY",
+      "Sci-Fi",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "LIFE TWISTED",
+      "Comedy",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "LUCK OPUS",
+      "Drama",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "MADIGAN DORADO",
+      "Travel",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "MYSTIC TRUMAN",
+      "Comedy",
+      2,
+      10,
+      5.0
+     ],
+     [
+      "SEATTLE EXPECATIONS",
+      "Drama",
+      5,
+      24,
+      4.8
+     ],
+     [
+      "BACKLASH UNDEFEATED",
+      "Children",
+      4,
+      19,
+      4.75
+     ],
+     [
+      "HANGING DEEP",
+      "Drama",
+      4,
+      19,
+      4.75
+     ]
+    ]
+   },
+   {
+    "range": "W1",
+    "values": [
+     [
+      "Inventory by Store & Category"
+     ]
+    ]
+   },
+   {
+    "range": "W3",
+    "values": [
+     [
+      "Store",
+      "Category",
+      "Total Copies",
+      "Unique Titles",
+      "Total Rentals"
+     ],
+     [
+      "Store 1",
+      "Action",
+      169,
+      56,
+      596
+     ],
+     [
+      "Store 1",
+      "Drama",
+      162,
+      51,
+      576
+     ],
+     [
+      "Store 1",
+      "Animation",
+      161,
+      53,
+      568
+     ],
+     [
+      "Store 1",
+      "Family",
+      157,
+      53,
+      557
+     ],
+     [
+      "Store 1",
+      "Sports",
+      163,
+      57,
+      555
+     ],
+     [
+      "Store 1",
+      "Foreign",
+      153,
+      50,
+      524
+     ],
+     [
+      "Store 1",
+      "Sci-Fi",
+      149,
+      48,
+      521
+     ],
+     [
+      "Store 1",
+      "New",
+      148,
+      50,
+      502
+     ],
+     [
+      "Store 1",
+      "Comedy",
+      142,
+      49,
+      502
+     ],
+     [
+      "Store 1",
+      "Games",
+      128,
+      44,
+      455
+     ],
+     [
+      "Store 1",
+      "Children",
+      129,
+      42,
+      453
+     ],
+     [
+      "Store 1",
+      "Documentary",
+      130,
+      46,
+      450
+     ],
+     [
+      "Store 1",
+      "Classics",
+      131,
+      42,
+      447
+     ],
+     [
+      "Store 1",
+      "Music",
+      122,
+      43,
+      436
+     ],
+     [
+      "Store 1",
+      "Travel",
+      114,
+      37,
+      395
+     ],
+     [
+      "Store 1",
+      "Horror",
+      112,
+      38,
+      386
+     ],
+     [
+      "Store 2",
+      "Sports",
+      181,
+      59,
+      624
+     ],
+     [
+      "Store 2",
+      "Documentary",
+      164,
+      51,
+      600
+     ],
+     [
+      "Store 2",
+      "Animation",
+      174,
+      57,
+      598
+     ],
+     [
+      "Store 2",
+      "Sci-Fi",
+      163,
+      51,
+      580
+     ],
+     [
+      "Store 2",
+      "Family",
+      153,
+      50,
+      539
+     ],
+     [
+      "Store 2",
+      "Action",
+      143,
+      49,
+      516
+     ],
+     [
+      "Store 2",
+      "Games",
+      148,
+      49,
+      514
+     ],
+     [
+      "Store 2",
+      "Foreign",
+      147,
+      50,
+      509
+     ],
+     [
+      "Store 2",
+      "Classics",
+      139,
+      45,
+      492
+     ],
+     [
+      "Store 2",
+      "Children",
+      140,
+      47,
+      492
+     ],
+     [
+      "Store 2",
+      "Drama",
+      138,
+      47,
+      484
+     ],
+     [
+      "Store 2",
+      "Horror",
+      136,
+      43,
+      460
+     ],
+     [
+      "Store 2",
+      "Travel",
+      121,
+      42,
+      442
+     ],
+     [
+      "Store 2",
+      "Comedy",
+      127,
+      41,
+      439
+     ],
+     [
+      "Store 2",
+      "New",
+      127,
+      43,
+      438
+     ],
+     [
+      "Store 2",
+      "Music",
+      110,
+      38,
+      394
+     ]
+    ]
+   }
+  ]
+ },
+ "Revenue & Finance": {
+  "clear_ranges": [
+   "M3:O"
+  ],
+  "skipped": [],
+  "updates": [
+   {
+    "range": "A1",
+    "values": [
+     [
+      "Revenue by Category"
+     ]
+    ]
+   },
+   {
+    "range": "B3",
+    "values": [
+     [
+      "Category",
+      "Total Revenue",
+      "Number of Rentals"
+     ],
+     [
+      "Sports",
+      5314.209999999847,
+      1179
+     ],
+     [
+      "Sci-Fi",
+      4756.979999999871,
+      1101
+     ],
+     [
+      "Animation",
+      4656.299999999861,
+      1166
+     ],
+     [
+      "Drama",
+      4587.389999999873,
+      1060
+     ],
+     [
+      "Comedy",
+      4383.579999999894,
+      941
+     ],
+     [
+      "Action",
+      4375.8499999998785,
+      1112
+     ],
+     [
+      "New",
+      4351.619999999899,
+      940
+     ],
+     [
+      "Games",
+      4281.3299999998935,
+      969
+     ],
+     [
+      "Foreign",
+      4270.669999999887,
+      1033
+     ],
+     [
+      "Family",
+      4226.0699999998815,
+      1096
+     ],
+     [
+      "Documentary",
+      4217.5199999998895,
+      1050
+     ],
+     [
+      "Horror",
+      3722.5399999999217,
+      846
+     ],
+     [
+      "Children",
+      3655.549999999911,
+      945
+     ],
+     [
+      "Classics",
+      3639.5899999999147,
+      939
+     ],
+     [
+      "Travel",
+      3549.639999999928,
+      837
+     ],
+     [
+      "Music",
+      3417.7199999999325,
+      830
+     ]
+    ]
+   },
+   {
+    "range": "A21",
+    "values": [
+     [
+      "Rentals & Revenue by Rating"
+     ]
+    ]
+   },
+   {
+    "range": "B23",
+    "values": [
+     [
+      "Rating",
+      "Total Rentals",
+      "Total Revenue ($)"
+     ],
+     [
+      "PG-13",
+      3585,
+      15259.15999999933
+     ],
+     [
+      "NC-17",
+      3293,
+      13875.069999999392
+     ],
+     [
+      "PG",
+      3212,
+      13337.909999999414
+     ],
+     [
+      "R",
+      3181,
+      13270.18999999942
+     ],
+     [
+      "G",
+      2773,
+      11664.229999999503
+     ]
+    ]
+   },
+   {
+    "range": "F1",
+    "values": [
+     [
+      "Revenue by Store"
+     ]
+    ]
+   },
+   {
+    "range": "F3",
+    "values": [
+     [
+      "Store",
+      "City",
+      "Country",
+      "Total Revenue",
+      "Number of Payments",
+      "Unique Customers"
+     ],
+     [
+      "Store 1",
+      "Lethbridge",
+      "Canada",
+      33524.62000000502,
+      8040,
+      599
+     ],
+     [
+      "Store 2",
+      "Woodridge",
+      "Australia",
+      33881.94000000493,
+      8004,
+      599
+     ]
+    ]
+   },
+   {
+    "range": "F7",
+    "values": [
+     [
+      "Store Comparison"
+     ]
+    ]
+   },
+   {
+    "range": "F9",
+    "values": [
+     [
+      "Store",
+      "Total Revenue",
+      "Number of Payments",
+      "Avg Payment",
+      "Total Rentals",
+      "Unique Customers"
+     ],
+     [
+      "Store 1",
+      33524.62000000502,
+      8040,
+      4.169728855722018,
+      8040,
+      599
+     ],
+     [
+      "Store 2",
+      33881.94000000493,
+      8004,
+      4.2331259370321,
+      8004,
+      599
+     ]
+    ]
+   },
+   {
+    "range": "M1",
+    "values": [
+     [
+      "Revenue by Month & Category"
+     ]
+    ]
+   },
+   {
+    "range": "M3",
+    "values": [
+     [
+      "Month",
+      "Category",
+      "Revenue"
+     ],
+     [
+      "2006-02",
+      "Animation",
+      66.75000000000001
+     ],
+     [
+      "2006-02",
+      "Action",
+      55.80000000000001
+     ],
+     [
+      "2006-02",
+      "Sports",
+      40.85
+     ],
+     [
+      "2006-02",
+      "Games",
+      39.88
+     ],
+     [
+      "2006-02",
+      "Horror",
+      33.879999999999995
+     ],
+     [
+      "2006-02",
+      "Travel",
+      30.91
+     ],
+     [
+      "2006-02",
+      "Sci-Fi",
+      30.91
+     ],
+     [
+      "2006-02",
+      "New",
+      30.890000000000004
+     ],
+     [
+      "2006-02",
+      "Drama",
+      29.92
+     ],
+     [
+      "2006-02",
+      "Family",
+      29.900000000000006
+     ],
+     [
+      "2006-02",
+      "Comedy",
+      25.900000000000002
+     ],
+     [
+      "2006-02",
+      "Music",
+      24.910000000000004
+     ],
+     [
+      "2006-02",
+      "Foreign",
+      24.89
+     ],
+     [
+      "2006-02",
+      "Classics",
+      24.889999999999997
+     ],
+     [
+      "2006-02",
+      "Children",
+      15.940000000000001
+     ],
+     [
+      "2006-02",
+      "Documentary",
+      7.960000000000001
+     ],
+     [
+      "2005-08",
+      "Sports",
+      1962.6800000000035
+     ],
+     [
+      "2005-08",
+      "Sci-Fi",
+      1707.150000000003
+     ],
+     [
+      "2005-08",
+      "Animation",
+      1654.9200000000033
+     ],
+     [
+      "2005-08",
+      "New",
+      1626.5400000000027
+     ],
+     [
+      "2005-08",
+      "Foreign",
+      1599.230000000003
+     ],
+     [
+      "2005-08",
+      "Comedy",
+      1593.5800000000027
+     ],
+     [
+      "2005-08",
+      "Drama",
+      1526.4700000000028
+     ],
+     [
+      "2005-08",
+      "Documentary",
+      1517.310000000003
+     ],
+     [
+      "2005-08",
+      "Games",
+      1508.4800000000027
+     ],
+     [
+      "2005-08",
+      "Family",
+      1474.160000000003
+     ],
+     [
+      "2005-08",
+      "Action",
+      1463.160000000003
+     ],
+     [
+      "2005-08",
+      "Classics",
+      1371.5200000000027
+     ],
+     [
+      "2005-08",
+      "Horror",
+      1342.0100000000023
+     ],
+     [
+      "2005-08",
+      "Children",
+      1315.6800000000026
+     ],
+     [
+      "2005-08",
+      "Travel",
+      1244.0200000000023
+     ],
+     [
+      "2005-08",
+      "Music",
+      1163.230000000002
+     ],
+     [
+      "2005-07",
+      "Sports",
+      2281.029999999993
+     ],
+     [
+      "2005-07",
+      "Sci-Fi",
+      2013.3800000000037
+     ],
+     [
+      "2005-07",
+      "Drama",
+      1978.3700000000038
+     ],
+     [
+      "2005-07",
+      "Animation",
+      1954.110000000004
+     ],
+     [
+      "2005-07",
+      "Family",
+      1840.4000000000037
+     ],
+     [
+      "2005-07",
+      "Comedy",
+      1829.170000000003
+     ],
+     [
+      "2005-07",
+      "New",
+      1826.110000000003
+     ],
+     [
+      "2005-07",
+      "Games",
+      1811.0800000000033
+     ],
+     [
+      "2005-07",
+      "Action",
+      1804.3600000000038
+     ],
+     [
+      "2005-07",
+      "Foreign",
+      1764.6800000000035
+     ],
+     [
+      "2005-07",
+      "Documentary",
+      1726.7100000000034
+     ],
+     [
+      "2005-07",
+      "Horror",
+      1594.3400000000029
+     ],
+     [
+      "2005-07",
+      "Children",
+      1539.9400000000032
+     ],
+     [
+      "2005-07",
+      "Classics",
+      1497.160000000003
+     ],
+     [
+      "2005-07",
+      "Travel",
+      1473.5500000000027
+     ],
+     [
+      "2005-07",
+      "Music",
+      1434.5200000000027
+     ],
+     [
+      "2005-06",
+      "Sports",
+      696.410000000001
+     ],
+     [
+      "2005-06",
+      "Animation",
+      691.2600000000012
+     ],
+     [
+      "2005-06",
+      "Sci-Fi",
+      685.3800000000011
+     ],
+     [
+      "2005-06",
+      "Drama",
+      682.480000000001
+     ],
+     [
+      "2005-06",
+      "Action",
+      681.4000000000011
+     ],
+     [
+      "2005-06",
+      "Comedy",
+      639.6500000000009
+     ],
+     [
+      "2005-06",
+      "Games",
+      628.580000000001
+     ],
+     [
+      "2005-06",
+      "Documentary",
+      612.400000000001
+     ],
+     [
+      "2005-06",
+      "Foreign",
+      585.5800000000008
+     ],
+     [
+      "2005-06",
+      "Family",
+      577.460000000001
+     ],
+     [
+      "2005-06",
+      "New",
+      565.6800000000007
+     ],
+     [
+      "2005-06",
+      "Travel",
+      533.7600000000008
+     ],
+     [
+      "2005-06",
+      "Music",
+      526.6700000000008
+     ],
+     [
+      "2005-06",
+      "Classics",
+      518.6400000000008
+     ],
+     [
+      "2005-06",
+      "Horror",
+      508.84000000000077
+     ],
+     [
+      "2005-06",
+      "Children",
+      495.7000000000007
+     ],
+     [
+      "2005-05",
+      "Action",
+      371.1300000000004
+     ],
+     [
+      "2005-05",
+      "Drama",
+      370.1500000000004
+     ],
+     [
+      "2005-05",
+      "Documentary",
+      353.14000000000044
+     ],
+     [
+      "2005-05",
+      "Sports",
+      333.24000000000035
+     ],
+     [
+      "2005-05",
+      "Sci-Fi",
+      320.1600000000003
+     ],
+     [
+      "2005-05",
+      "Family",
+      304.1500000000004
+     ],
+     [
+      "2005-05",
+      "New",
+      302.4000000000002
+     ],
+     [
+      "2005-05",
+      "Foreign",
+      296.2900000000003
+     ],
+     [
+      "2005-05",
+      "Comedy",
+      295.2800000000003
+     ],
+     [
+      "2005-05",
+      "Games",
+      293.3100000000003
+     ],
+     [
+      "2005-05",
+      "Animation",
+      289.26000000000033
+     ],
+     [
+      "2005-05",
+      "Children",
+      288.29000000000025
+     ],
+     [
+      "2005-05",
+      "Music",
+      268.3900000000002
+     ],
+     [
+      "2005-05",
+      "Travel",
+      267.4000000000002
+     ],
+     [
+      "2005-05",
+      "Horror",
+      243.47000000000014
+     ],
+     [
+      "2005-05",
+      "Classics",
+      227.38000000000017
+     ]
+    ]
+   }
+  ]
+ },
+ "Film Catalogue": {
+  "clear_ranges": [
+   "M3:P"
+  ],
+  "skipped": [],
+  "updates": [
+   {
+    "range": "A1",
+    "values": [
+     [
+      "Top 20 Films by Rentals"
+     ]
+    ]
+   },
+   {
+    "range": "B3",
+    "values": [
+     [
+      "Film Title",
+      "Category",
+      "Rating",
+      "Total Rentals",
+      "Total Revenue"
+     ],
+     [
+      "BUCKET BROTHERHOOD",
+      "Travel",
+      "PG",
+      34,
+      180.66000000000003
+     ],
+     [
+      "ROCKETEER MOTHER",
+      "Foreign",
+      "PG-13",
+      33,
+      116.66999999999993
+     ],
+     [
+      "SCALAWAG DUCK",
+      "Music",
+      "NC-17",
+      32,
+      172.68
+     ],
+     [
+      "RIDGEMONT SUBMARINE",
+      "New",
+      "PG-13",
+      32,
+      130.67999999999995
+     ],
+     [
+      "FORWARD TEMPLE",
+      "Games",
+      "NC-17",
+      32,
+      128.67999999999995
+     ],
+     [
+      "GRIT CLOCKWORK",
+      "Games",
+      "PG",
+      32,
+      110.67999999999994
+     ],
+     [
+      "JUGGLER HARDLY",
+      "Animation",
+      "PG-13",
+      32,
+      96.67999999999996
+     ],
+     [
+      "WIFE TURN",
+      "Documentary",
+      "NC-17",
+      31,
+      223.69000000000008
+     ],
+     [
+      "ZORRO ARK",
+      "Comedy",
+      "NC-17",
+      31,
+      214.69000000000008
+     ],
+     [
+      "GOODFELLAS SALUTE",
+      "Sci-Fi",
+      "PG",
+      31,
+      209.69000000000005
+     ],
+     [
+      "APACHE DIVINE",
+      "Family",
+      "NC-17",
+      31,
+      178.69000000000003
+     ],
+     [
+      "NETWORK PEAK",
+      "Family",
+      "PG-13",
+      31,
+      133.68999999999994
+     ],
+     [
+      "TIMBERLAND SKY",
+      "Classics",
+      "G",
+      31,
+      123.68999999999996
+     ],
+     [
+      "ROBBERS JOON",
+      "Children",
+      "PG-13",
+      31,
+      105.68999999999996
+     ],
+     [
+      "RUSH GOODFELLAS",
+      "Family",
+      "PG",
+      31,
+      88.68999999999996
+     ],
+     [
+      "HOBBIT ALIEN",
+      "Drama",
+      "PG-13",
+      31,
+      81.69
+     ],
+     [
+      "HARRY IDAHO",
+      "Drama",
+      "PG-13",
+      30,
+      195.70000000000005
+     ],
+     [
+      "CAT CONEHEADS",
+      "Comedy",
+      "G",
+      30,
+      181.70000000000005
+     ],
+     [
+      "MASSACRE USUAL",
+      "Games",
+      "R",
+      30,
+      179.70000000000005
+     ],
+     [
+      "DOGMA FAMILY",
+      "Animation",
+      "G",
+      30,
+      178.70000000000005
+     ]
+    ]
+   },
+   {
+    "range": "A26",
+    "values": [
+     [
+      "Film Length Distribution"
+     ]
+    ]
+   },
+   {
+    "range": "B28",
+    "values": [
+     [
+      "Length Bucket",
+      "Number of Films",
+      "Avg Rental Rate",
+      "Avg Replacement Cost"
+     ],
+     [
+      "< 60 min",
+      96,
+      2.906666666666671,
+      19.54208333333334
+     ],
+     [
+      "60 - 89 min",
+      224,
+      2.954285714285721,
+      20.311428571428454
+     ],
+     [
+      "90 - 119 min",
+      214,
+      2.9058878504672965,
+      19.546074766355034
+     ],
+     [
+      "120 - 149 min",
+      216,
+      3.017777777777784,
+      20.23999999999988
+     ],
+     [
+      "150+ min",
+      250,
+      3.0620000000000074,
+      20.013999999999875
+     ]
+    ]
+   },
+   {
+    "range": "A35",
+    "values": [
+     [
+      "Avg Rental Duration by Category"
+     ]
+    ]
+   },
+   {
+    "range": "B37",
+    "values": [
+     [
+      "Category",
+      "Avg Days Kept",
+      "Avg Allowed Days"
+     ],
+     [
+      "Sports",
+      5.197093952844428,
+      4.716216216216216
+     ],
+     [
+      "Games",
+      5.183844531701478,
+      5.065573770491803
+     ],
+     [
+      "Comedy",
+      5.149209436104141,
+      4.931034482758621
+     ],
+     [
+      "Sci-Fi",
+      5.079314069335467,
+      4.885245901639344
+     ],
+     [
+      "Music",
+      5.0693435422594,
+      5.235294117647059
+     ],
+     [
+      "Documentary",
+      5.0570889261670855,
+      4.764705882352941
+     ],
+     [
+      "Family",
+      5.051318354365895,
+      5.173913043478261
+     ],
+     [
+      "Horror",
+      5.038586630699241,
+      4.857142857142857
+     ],
+     [
+      "Action",
+      5.026815068485326,
+      4.953125
+     ],
+     [
+      "New",
+      5.02450857005065,
+      4.746031746031746
+     ],
+     [
+      "Foreign",
+      5.0213055827417055,
+      5.109589041095891
+     ],
+     [
+      "Children",
+      4.950657466577745,
+      5.033333333333333
+     ],
+     [
+      "Classics",
+      4.948552120679248,
+      5.0701754385964914
+     ],
+     [
+      "Drama",
+      4.885405455312647,
+      5.080645161290323
+     ],
+     [
+      "Animation",
+      4.872123968939594,
+      4.893939393939394
+     ],
+     [
+      "Travel",
+      4.823864705083574,
+      5.350877192982456
+     ]
+    ]
+   },
+   {
+    "range": "H1",
+    "values": [
+     [
+      "Top 20 Actors by Rentals"
+     ]
+    ]
+   },
+   {
+    "range": "H3",
+    "values": [
+     [
+      "Actor",
+      "Films in Catalogue",
+      "Total Rentals Generated",
+      "Total Revenue"
+     ],
+     [
+      "GINA DEGENERES",
+      42,
+      753,
+      3442.489999999943
+     ],
+     [
+      "MATTHEW CARREY",
+      39,
+      678,
+      2742.1899999999646
+     ],
+     [
+      "MARY KEITEL",
+      40,
+      674,
+      2689.249999999977
+     ],
+     [
+      "ANGELA WITHERSPOON",
+      35,
+      654,
+      2614.4599999999723
+     ],
+     [
+      "WALTER TORN",
+      41,
+      640,
+      2620.619999999978
+     ],
+     [
+      "HENRY BERRY",
+      35,
+      612,
+      2602.8799999999746
+     ],
+     [
+      "JAYNE NOLTE",
+      34,
+      611,
+      2400.85999999999
+     ],
+     [
+      "VAL BOLGER",
+      35,
+      605,
+      2253.9499999999966
+     ],
+     [
+      "SANDRA KILMER",
+      37,
+      604,
+      2485.9599999999773
+     ],
+     [
+      "SEAN GUINESS",
+      33,
+      599,
+      2423.99999999998
+     ],
+     [
+      "ANGELA HUDSON",
+      34,
+      574,
+      2361.2599999999866
+     ],
+     [
+      "SCARLETT DAMON",
+      36,
+      572,
+      2655.2799999999747
+     ],
+     [
+      "EWAN GOODING",
+      33,
+      571,
+      2264.309999999994
+     ],
+     [
+      "KEVIN GARLAND",
+      33,
+      565,
+      2393.3599999999856
+     ],
+     [
+      "WARREN NOLTE",
+      34,
+      564,
+      2271.369999999991
+     ],
+     [
+      "WOODY HOFFMAN",
+      31,
+      560,
+      2546.3999999999864
+     ],
+     [
+      "CAMERON ZELLWEGER",
+      33,
+      560,
+      2529.409999999984
+     ],
+     [
+      "JADA RYDER",
+      31,
+      560,
+      2294.4299999999835
+     ],
+     [
+      "HELEN VOIGHT",
+      32,
+      557,
+      2358.449999999984
+     ],
+     [
+      "SIDNEY CROWE",
+      34,
+      557,
+      2177.4199999999973
+     ]
+    ]
+   },
+   {
+    "range": "M1",
+    "values": [
+     [
+      "Films Never Stocked (No Inventory Copies)"
+     ]
+    ]
+   },
+   {
+    "range": "M3",
+    "values": [
+     [
+      "Film Title",
+      "Rating",
+      "Rental Rate",
+      "Replacement Cost"
+     ],
+     [
+      "ALICE FANTASIA",
+      "NC-17",
+      0.99,
+      23.99
+     ],
+     [
+      "APOLLO TEEN",
+      "PG-13",
+      2.99,
+      15.99
+     ],
+     [
+      "ARGONAUTS TOWN",
+      "PG-13",
+      0.99,
+      12.99
+     ],
+     [
+      "ARK RIDGEMONT",
+      "NC-17",
+      0.99,
+      25.99
+     ],
+     [
+      "ARSENIC INDEPENDENCE",
+      "PG",
+      0.99,
+      17.99
+     ],
+     [
+      "BOONDOCK BALLROOM",
+      "NC-17",
+      0.99,
+      14.99
+     ],
+     [
+      "BUTCH PANTHER",
+      "PG-13",
+      0.99,
+      19.99
+     ],
+     [
+      "CATCH AMISTAD",
+      "G",
+      0.99,
+      10.99
+     ],
+     [
+      "CHINATOWN GLADIATOR",
+      "PG",
+      4.99,
+      24.99
+     ],
+     [
+      "CHOCOLATE DUCK",
+      "R",
+      2.99,
+      13.99
+     ],
+     [
+      "COMMANDMENTS EXPRESS",
+      "R",
+      4.99,
+      13.99
+     ],
+     [
+      "CROSSING DIVORCE",
+      "R",
+      4.99,
+      19.99
+     ],
+     [
+      "CROWDS TELEMARK",
+      "R",
+      4.99,
+      16.99
+     ],
+     [
+      "CRYSTAL BREAKING",
+      "NC-17",
+      2.99,
+      22.99
+     ],
+     [
+      "DAZED PUNK",
+      "G",
+      4.99,
+      20.99
+     ],
+     [
+      "DELIVERANCE MULHOLLAND",
+      "R",
+      0.99,
+      9.99
+     ],
+     [
+      "FIREHOUSE VIETNAM",
+      "G",
+      0.99,
+      14.99
+     ],
+     [
+      "FLOATS GARDEN",
+      "PG-13",
+      2.99,
+      29.99
+     ],
+     [
+      "FRANKENSTEIN STRANGER",
+      "NC-17",
+      0.99,
+      16.99
+     ],
+     [
+      "GLADIATOR WESTWARD",
+      "PG",
+      4.99,
+      20.99
+     ],
+     [
+      "GUMP DATE",
+      "NC-17",
+      4.99,
+      12.99
+     ],
+     [
+      "HATE HANDICAP",
+      "PG",
+      0.99,
+      26.99
+     ],
+     [
+      "HOCUS FRIDA",
+      "G",
+      2.99,
+      19.99
+     ],
+     [
+      "KENTUCKIAN GIANT",
+      "PG",
+      2.99,
+      10.99
+     ],
+     [
+      "KILL BROTHERHOOD",
+      "G",
+      0.99,
+      15.99
+     ],
+     [
+      "MUPPET MILE",
+      "PG",
+      4.99,
+      18.99
+     ],
+     [
+      "ORDER BETRAYED",
+      "PG-13",
+      2.99,
+      13.99
+     ],
+     [
+      "PEARL DESTINY",
+      "NC-17",
+      2.99,
+      10.99
+     ],
+     [
+      "PERDITION FARGO",
+      "NC-17",
+      4.99,
+      27.99
+     ],
+     [
+      "PSYCHO SHRUNK",
+      "PG-13",
+      2.99,
+      11.99
+     ],
+     [
+      "RAIDERS ANTITRUST",
+      "PG-13",
+      0.99,
+      11.99
+     ],
+     [
+      "RAINBOW SHOCK",
+      "PG",
+      4.99,
+      14.99
+     ],
+     [
+      "ROOF CHAMPION",
+      "R",
+      0.99,
+      25.99
+     ],
+     [
+      "SISTER FREDDY",
+      "PG-13",
+      4.99,
+      19.99
+     ],
+     [
+      "SKY MIRACLE",
+      "PG",
+      2.99,
+      15.99
+     ],
+     [
+      "SUICIDES SILENCE",
+      "G",
+      4.99,
+      13.99
+     ],
+     [
+      "TADPOLE PARK",
+      "PG",
+      2.99,
+      13.99
+     ],
+     [
+      "TREASURE COMMAND",
+      "PG-13",
+      0.99,
+      28.99
+     ],
+     [
+      "VILLAIN DESPERATE",
+      "PG-13",
+      4.99,
+      27.99
+     ],
+     [
+      "VOLUME HOUSE",
+      "PG",
+      4.99,
+      12.99
+     ],
+     [
+      "WAKE JAWS",
+      "G",
+      4.99,
+      18.99
+     ],
+     [
+      "WALLS ARTIST",
+      "PG",
+      4.99,
+      19.99
+     ]
+    ]
+   }
+  ]
+ },
+ "Customers & Geography": {
+  "clear_ranges": [
+   "P3:Q"
+  ],
+  "skipped": [],
+  "updates": [
+   {
+    "range": "A1",
+    "values": [
+     [
+      "Top 20 Customers by Spend"
+     ]
+    ]
+   },
+   {
+    "range": "B3",
+    "values": [
+     [
+      "Customer ID",
+      "Customer Name",
+      "Total Spent",
+      "Number of Payments"
+     ],
+     [
+      526,
+      "KARL SEAL",
+      221.5500000000001,
+      45
+     ],
+     [
+      148,
+      "ELEANOR HUNT",
+      216.5400000000001,
+      46
+     ],
+     [
+      144,
+      "CLARA SHAW",
+      195.58000000000007,
+      42
+     ],
+     [
+      137,
+      "RHONDA KENNEDY",
+      194.61000000000007,
+      39
+     ],
+     [
+      178,
+      "MARION SNYDER",
+      194.61000000000007,
+      39
+     ],
+     [
+      459,
+      "TOMMY COLLAZO",
+      186.62000000000006,
+      38
+     ],
+     [
+      469,
+      "WESLEY BULL",
+      177.60000000000002,
+      40
+     ],
+     [
+      468,
+      "TIM CARY",
+      175.61000000000004,
+      39
+     ],
+     [
+      236,
+      "MARCIA DEAN",
+      175.58,
+      42
+     ],
+     [
+      181,
+      "ANA BRADLEY",
+      174.66000000000005,
+      34
+     ],
+     [
+      176,
+      "JUNE CARROLL",
+      173.63000000000002,
+      37
+     ],
+     [
+      259,
+      "LENA JENSEN",
+      170.67000000000004,
+      33
+     ],
+     [
+      50,
+      "DIANE COLLINS",
+      169.65,
+      35
+     ],
+     [
+      522,
+      "ARNOLD HAVENS",
+      167.67000000000002,
+      33
+     ],
+     [
+      410,
+      "CURTIS IRBY",
+      167.62000000000003,
+      38
+     ],
+     [
+      403,
+      "MIKE WAY",
+      166.65000000000006,
+      35
+     ],
+     [
+      295,
+      "DAISY BATES",
+      162.62000000000003,
+      38
+     ],
+     [
+      209,
+      "TONYA CHAPMAN",
+      161.68,
+      32
+     ],
+     [
+      373,
+      "LOUIS LEONE",
+      161.65000000000003,
+      35
+     ],
+     [
+      470,
+      "GORDON ALLARD",
+      160.67999999999998,
+      32
+     ]
+    ]
+   },
+   {
+    "range": "G1",
+    "values": [
+     [
+      "Top 20 Customers by Rentals"
+     ]
+    ]
+   },
+   {
+    "range": "G3",
+    "values": [
+     [
+      "Customer ID",
+      "Customer Name",
+      "Total Rentals"
+     ],
+     [
+      148,
+      "ELEANOR HUNT",
+      46
+     ],
+     [
+      526,
+      "KARL SEAL",
+      45
+     ],
+     [
+      144,
+      "CLARA SHAW",
+      42
+     ],
+     [
+      236,
+      "MARCIA DEAN",
+      42
+     ],
+     [
+      75,
+      "TAMMY SANDERS",
+      41
+     ],
+     [
+      197,
+      "SUE PETERS",
+      40
+     ],
+     [
+      469,
+      "WESLEY BULL",
+      40
+     ],
+     [
+      137,
+      "RHONDA KENNEDY",
+      39
+     ],
+     [
+      178,
+      "MARION SNYDER",
+      39
+     ],
+     [
+      468,
+      "TIM CARY",
+      39
+     ],
+     [
+      5,
+      "ELIZABETH BROWN",
+      38
+     ],
+     [
+      295,
+      "DAISY BATES",
+      38
+     ],
+     [
+      410,
+      "CURTIS IRBY",
+      38
+     ],
+     [
+      459,
+      "TOMMY COLLAZO",
+      38
+     ],
+     [
+      176,
+      "JUNE CARROLL",
+      37
+     ],
+     [
+      198,
+      "ELSIE KELLEY",
+      37
+     ],
+     [
+      257,
+      "MARSHA DOUGLAS",
+      37
+     ],
+     [
+      366,
+      "BRANDON HUEY",
+      37
+     ],
+     [
+      29,
+      "ANGELA HERNANDEZ",
+      36
+     ],
+     [
+      267,
+      "MARGIE WADE",
+      36
+     ]
+    ]
+   },
+   {
+    "range": "K1",
+    "values": [
+     [
+      "Customer Segments by Rental Volume"
+     ]
+    ]
+   },
+   {
+    "range": "K3",
+    "values": [
+     [
+      "Customer Segment",
+      "Customers",
+      "Avg Total Spend",
+      "Avg Rentals"
+     ],
+     [
+      "12-20 Rentals",
+      56,
+      76.05125000000002,
+      18.089285714285715
+     ],
+     [
+      "21-30 Rentals",
+      409,
+      107.72352078239614,
+      25.682151589242054
+     ],
+     [
+      "31-40 Rentals",
+      129,
+      140.5727131782946,
+      33.41860465116279
+     ],
+     [
+      "41+ Rentals",
+      5,
+      192.96800000000005,
+      43.2
+     ]
+    ]
+   },
+   {
+    "range": "P1",
+    "values": [
+     [
+      "Customers by Country"
+     ]
+    ]
+   },
+   {
+    "range": "P3",
+    "values": [
+     [
+      "Country",
+      "Number of Customers"
+     ],
+     [
+      "India",
+      60
+     ],
+     [
+      "China",
+      53
+     ],
+     [
+      "United States",
+      36
+     ],
+     [
+      "Japan",
+      31
+     ],
+     [
+      "Mexico",
+      30
+     ],
+     [
+      "Brazil",
+      28
+     ],
+     [
+      "Russian Federation",
+      28
+     ],
+     [
+      "Philippines",
+      20
+     ],
+     [
+      "Turkey",
+      15
+     ],
+     [
+      "Indonesia",
+      14
+     ],
+     [
+      "Argentina",
+      13
+     ],
+     [
+      "Nigeria",
+      13
+     ],
+     [
+      "South Africa",
+      11
+     ],
+     [
+      "Taiwan",
+      10
+     ],
+     [
+      "United Kingdom",
+      9
+     ],
+     [
+      "Iran",
+      8
+     ],
+     [
+      "Poland",
+      8
+     ],
+     [
+      "Germany",
+      7
+     ],
+     [
+      "Italy",
+      7
+     ],
+     [
+      "Venezuela",
+      7
+     ],
+     [
+      "Colombia",
+      6
+     ],
+     [
+      "Egypt",
+      6
+     ],
+     [
+      "Ukraine",
+      6
+     ],
+     [
+      "Vietnam",
+      6
+     ],
+     [
+      "Canada",
+      5
+     ],
+     [
+      "Netherlands",
+      5
+     ],
+     [
+      "Pakistan",
+      5
+     ],
+     [
+      "Saudi Arabia",
+      5
+     ],
+     [
+      "South Korea",
+      5
+     ],
+     [
+      "Spain",
+      5
+     ],
+     [
+      "France",
+      4
+     ],
+     [
+      "Israel",
+      4
+     ],
+     [
+      "Peru",
+      4
+     ],
+     [
+      "Yemen",
+      4
+     ],
+     [
+      "Algeria",
+      3
+     ],
+     [
+      "Austria",
+      3
+     ],
+     [
+      "Bangladesh",
+      3
+     ],
+     [
+      "Chile",
+      3
+     ],
+     [
+      "Dominican Republic",
+      3
+     ],
+     [
+      "Ecuador",
+      3
+     ],
+     [
+      "Malaysia",
+      3
+     ],
+     [
+      "Morocco",
+      3
+     ],
+     [
+      "Mozambique",
+      3
+     ],
+     [
+      "Paraguay",
+      3
+     ],
+     [
+      "Switzerland",
+      3
+     ],
+     [
+      "Tanzania",
+      3
+     ],
+     [
+      "Thailand",
+      3
+     ],
+     [
+      "United Arab Emirates",
+      3
+     ],
+     [
+      "Angola",
+      2
+     ],
+     [
+      "Azerbaijan",
+      2
+     ],
+     [
+      "Belarus",
+      2
+     ],
+     [
+      "Bolivia",
+      2
+     ],
+     [
+      "Bulgaria",
+      2
+     ],
+     [
+      "Cambodia",
+      2
+     ],
+     [
+      "Cameroon",
+      2
+     ],
+     [
+      "Congo, The Democratic Republic of the",
+      2
+     ],
+     [
+      "French Polynesia",
+      2
+     ],
+     [
+      "Greece",
+      2
+     ],
+     [
+      "Kazakstan",
+      2
+     ],
+     [
+      "Kenya",
+      2
+     ],
+     [
+      "Latvia",
+      2
+     ],
+     [
+      "Myanmar",
+      2
+     ],
+     [
+      "Oman",
+      2
+     ],
+     [
+      "Puerto Rico",
+      2
+     ],
+     [
+      "Romania",
+      2
+     ],
+     [
+      "Sudan",
+      2
+     ],
+     [
+      "Yugoslavia",
+      2
+     ],
+     [
+      "Afghanistan",
+      1
+     ],
+     [
+      "American Samoa",
+      1
+     ],
+     [
+      "Anguilla",
+      1
+     ],
+     [
+      "Armenia",
+      1
+     ],
+     [
+      "Bahrain",
+      1
+     ],
+     [
+      "Brunei",
+      1
+     ],
+     [
+      "Chad",
+      1
+     ],
+     [
+      "Czech Republic",
+      1
+     ],
+     [
+      "Estonia",
+      1
+     ],
+     [
+      "Ethiopia",
+      1
+     ],
+     [
+      "Faroe Islands",
+      1
+     ],
+     [
+      "Finland",
+      1
+     ],
+     [
+      "French Guiana",
+      1
+     ],
+     [
+      "Gambia",
+      1
+     ],
+     [
+      "Greenland",
+      1
+     ],
+     [
+      "Holy See (Vatican City State)",
+      1
+     ],
+     [
+      "Hong Kong",
+      1
+     ],
+     [
+      "Hungary",
+      1
+     ],
+     [
+      "Iraq",
+      1
+     ],
+     [
+      "Kuwait",
+      1
+     ],
+     [
+      "Liechtenstein",
+      1
+     ],
+     [
+      "Lithuania",
+      1
+     ],
+     [
+      "Madagascar",
+      1
+     ],
+     [
+      "Malawi",
+      1
+     ],
+     [
+      "Moldova",
+      1
+     ],
+     [
+      "Nauru",
+      1
+     ],
+     [
+      "Nepal",
+      1
+     ],
+     [
+      "New Zealand",
+      1
+     ],
+     [
+      "North Korea",
+      1
+     ],
+     [
+      "Runion",
+      1
+     ],
+     [
+      "Saint Vincent and the Grenadines",
+      1
+     ],
+     [
+      "Senegal",
+      1
+     ],
+     [
+      "Slovakia",
+      1
+     ],
+     [
+      "Sri Lanka",
+      1
+     ],
+     [
+      "Sweden",
+      1
+     ],
+     [
+      "Tonga",
+      1
+     ],
+     [
+      "Tunisia",
+      1
+     ],
+     [
+      "Turkmenistan",
+      1
+     ],
+     [
+      "Tuvalu",
+      1
+     ],
+     [
+      "Virgin Islands, U.S.",
+      1
+     ],
+     [
+      "Zambia",
+      1
+     ]
+    ]
+   },
+   {
+    "range": "T1",
+    "values": [
+     [
+      "Top 20 Cities by Customers"
+     ]
+    ]
+   },
+   {
+    "range": "T3",
+    "values": [
+     [
+      "City",
+      "Country",
+      "Customers",
+      "Total Revenue"
+     ],
+     [
+      "Aurora",
+      "United States",
+      2,
+      198.49999999999994
+     ],
+     [
+      "London",
+      "United Kingdom",
+      2,
+      180.51999999999995
+     ],
+     [
+      "Cape Coral",
+      "United States",
+      1,
+      221.5500000000001
+     ],
+     [
+      "Saint-Denis",
+      "Runion",
+      1,
+      216.5400000000001
+     ],
+     [
+      "Molodetno",
+      "Belarus",
+      1,
+      195.58000000000007
+     ],
+     [
+      "Apeldoorn",
+      "Netherlands",
+      1,
+      194.61000000000007
+     ],
+     [
+      "Santa Brbara dOeste",
+      "Brazil",
+      1,
+      194.61000000000007
+     ],
+     [
+      "Qomsheh",
+      "Iran",
+      1,
+      186.62000000000006
+     ],
+     [
+      "Ourense (Orense)",
+      "Spain",
+      1,
+      177.60000000000002
+     ],
+     [
+      "Bijapur",
+      "India",
+      1,
+      175.61000000000004
+     ],
+     [
+      "Tanza",
+      "Philippines",
+      1,
+      175.58
+     ],
+     [
+      "Memphis",
+      "United States",
+      1,
+      174.66000000000005
+     ],
+     [
+      "Skikda",
+      "Algeria",
+      1,
+      173.63000000000002
+     ],
+     [
+      "Halisahar",
+      "India",
+      1,
+      170.67000000000004
+     ],
+     [
+      "Omdurman",
+      "Sudan",
+      1,
+      169.65
+     ],
+     [
+      "Santa Rosa",
+      "Philippines",
+      1,
+      167.67000000000002
+     ],
+     [
+      "Richmond Hill",
+      "Canada",
+      1,
+      167.62000000000003
+     ],
+     [
+      "Valparai",
+      "India",
+      1,
+      166.65000000000006
+     ],
+     [
+      "Kolpino",
+      "Russian Federation",
+      1,
+      162.62000000000003
+     ],
+     [
+      "Bhilwara",
+      "India",
+      1,
+      161.68
+     ]
+    ]
+   }
+  ]
+ }
+}
