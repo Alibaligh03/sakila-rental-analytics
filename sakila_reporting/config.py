@@ -15,9 +15,10 @@ from .retry import MODES as RETRY_MODES
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-# Sakila is a historical dataset: its rentals fall in eight-day bursts between 2005-05-24 and 2005-08-23 (plus a few days in
-# 2006-02). The as-of date plays the role of "today"; this default sits just after the last continuous burst, where both the
-# daily backfill and the like-for-like month windows have data.
+# Sakila is a historical dataset: its rentals fall in eight-day bursts between 2005-05-24 and 2005-08-23, plus one odd batch of
+# 182 rentals that all share the single timestamp 2006-02-14 15:16:03 (all unreturned; see the README). The as-of date plays the
+# role of "today"; this default sits just after the last continuous burst, where both the daily backfill and the like-for-like
+# month windows have data.
 DEFAULT_AS_OF = date(2005, 8, 24)
 RUN_MODES = ("daily", "first-of-month")
 QUERY_MODES = ("split", "cte")

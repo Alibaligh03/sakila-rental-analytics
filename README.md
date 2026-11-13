@@ -53,8 +53,8 @@ Finished in 1.2s: success
 
 ### Why an "as-of date"?
 
-Sakila is a historical dataset: its rentals fall in eight-day bursts between 2005-05-24 and 2005-08-23, so "today" has no
-data. The pipeline takes the day it pretends to run on (`--as-of`, default `2005-08-24`) and works out everything relative to
+Sakila is a historical dataset: its rentals fall in five eight-day bursts between 2005-05-24 and 2005-08-23 (plus one odd batch,
+described under *Known data quirk* below), so "today" has no data. The pipeline takes the day it pretends to run on (`--as-of`, default `2005-08-24`) and works out everything relative to
 it, exactly as a production job works relative to the current date. Because the data is sparse, a few blocks are legitimately
 empty in some windows (for example "first-time customers" in the default 8-day window: everyone has rented before).
 
@@ -259,6 +259,21 @@ actors, customers, inventory, rentals, payments and stores in a normalised schem
 - 599 customers across multiple countries
 - 16,044 rentals and 16,049 payments
 - 2 store locations
+
+### Known data quirk: 182 rentals dated 2006-02-14
+
+Besides the five bursts, the database holds **182 rentals that all carry the same timestamp (2006-02-14 15:16:03)**, six months
+after the last real rental. All 182 are unreturned (158 customers have one), and they account for 182 of the 183 unreturned
+rentals in the database. They look like a data-load artefact rather than activity. The dashboard reports the database as it is, so
+the totals reconcile to the raw tables, but three figures need that context:
+
+| Figure | What the artefact does |
+|---|---|
+| Rentals by day of week | all 182 fall on a Tuesday, so Tuesday looks busiest (2,463 rentals); without them it is 2,281, in line with the other days |
+| Monthly trend | shows a 2006-02 month with 182 rentals and 182 unreturned, which is not a real month |
+| Currently Unreturned | 183, of which 182 are this batch; only 1 rental from the real period is unreturned |
+
+With the default as-of date (or any date before 2006) the daily and month-to-date windows never reach the batch, so those tabs are unaffected.
 
 ## Key SQL techniques
 
