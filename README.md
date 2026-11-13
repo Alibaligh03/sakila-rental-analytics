@@ -264,7 +264,7 @@ actors, customers, inventory, rentals, payments and stores in a normalised schem
 
 Besides the five bursts, the database holds **182 rentals that all carry the same timestamp (2006-02-14 15:16:03)**, six months
 after the last real rental. All 182 are unreturned (158 customers have one), and they account for 182 of the 183 unreturned
-rentals in the database. They look like a data-load artefact rather than activity, and left in they distort three views:
+rentals in the database. They look like a data-load artifact rather than activity, and left in they distort three views:
 
 | View | Effect of the batch | What the dashboard does |
 |---|---|---|
