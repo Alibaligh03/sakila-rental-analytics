@@ -50,6 +50,7 @@ class Table:
 class Transposed:
     anchor: str
     query: str
+    clear_width: int | None = None   # columns (label column included) cleared before each write, so a block that gets shorter leaves nothing behind
 
 
 Block = Union[Value, Label, Stamp, Table, Transposed]
@@ -71,7 +72,7 @@ EXECUTIVE_SUMMARY: list[Block] = [
     Value("C10", "total_films"),
     Value("C11", "unreturned"),
     Stamp("C12"),                             # Last Updated
-    Transposed("B16", "monthly_revenue"),
+    Transposed("B16", "monthly_revenue", clear_width=8),   # B:I; the Operations tab starts in column J, so a longer block must not reach it
     Table("B25", "rentals_by_dow"),
     Value("C37", "late_returns", 0, 0),       # Late Returns
     Value("C38", "late_returns", 0, 1),       # Avg Days Overdue

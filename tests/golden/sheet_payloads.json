@@ -1,6 +1,7 @@
 {
  "Overview": {
   "clear_ranges": [
+   "B16:I21",
    "W3:AA"
   ],
   "skipped": [],

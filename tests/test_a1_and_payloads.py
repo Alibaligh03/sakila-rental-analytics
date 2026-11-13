@@ -99,10 +99,34 @@ def test_open_ended_lists_clear_their_old_range_first(results):
     assert built["Revenue & Finance"].clear_ranges == ["M3:O"]
     assert built["Film Catalogue"].clear_ranges == ["M3:P"]
     assert built["Customers & Geography"].clear_ranges == ["P3:Q"]
-    assert built["Overview"].clear_ranges == ["W3:AA"]  # the former Operations tab's N3:R, moved 9 columns right
+    assert built["Overview"].clear_ranges == ["B16:I21", "W3:AA"]  # the monthly block (B:I), then the former Operations tab's N3:R, moved 9 columns right
 
 
 def test_open_ended_blocks_are_the_lists_whose_length_can_change():
     open_ended = {b.query for blocks in SHEETS.values() for b in blocks if isinstance(b, Table) and b.open_ended}
     assert open_ended == {"revenue_by_month_category", "films_never_stocked", "customers_by_country", "inventory_by_store"}
     assert not any(isinstance(b, (Value, Transposed)) and getattr(b, "open_ended", False) for blocks in SHEETS.values() for b in blocks)
+
+
+def test_a_monthly_block_that_gets_shorter_leaves_no_stale_column(results):
+    """The 2006-02 batch used to be a fifth month; when it was left out the old last month stayed behind in column G."""
+    from sakila_reporting.sheets import SheetsPublisher
+    from sakila_reporting.workbook import LocalWorkbook
+    book = LocalWorkbook()
+    book.add_worksheet("Overview", rows=100, cols=27)
+    publisher = SheetsPublisher(book, retries=1, delay=0, sleep=lambda s: None)
+    longer = dict(results)
+    longer["monthly_revenue"] = pd.concat([results["monthly_revenue"], results["monthly_revenue"].iloc[[-1]].assign(Month="2005-04")], ignore_index=True)
+    publisher.publish(build_payloads(longer, RUN)["Overview"])
+    sheet = book.worksheet("Overview")
+    last = a1.cell_at("B16", 0, len(results["monthly_revenue"]) + 1)          # the column only the longer block used
+    assert sheet.acell(last).value != ""
+    publisher.publish(build_payloads(results, RUN)["Overview"])
+    assert all(sheet.acell(a1.cell_at("B16", r, len(results["monthly_revenue"]) + 1)).value == "" for r in range(6))
+
+
+def test_a_monthly_block_too_long_for_its_room_is_refused(results):
+    too_long = dict(results)
+    too_long["monthly_revenue"] = pd.concat([results["monthly_revenue"]] * 3, ignore_index=True)   # 12 months: would run into the Operations tab
+    with pytest.raises(ValueError, match="room"):
+        build_payloads(too_long, RUN)

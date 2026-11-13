@@ -60,7 +60,11 @@ def _block_updates(block: Block, results: dict[str, pd.DataFrame], run_started: 
             raise ValueError(f"query '{block.query}' has no value at row {block.row}, column {block.col}") from exc
     if isinstance(block, Transposed):
         values = [[col] + df[col].map(to_python).tolist() for col in df.columns]
-        return [{"range": block.anchor, "values": values}], []
+        if block.clear_width is None:
+            return [{"range": block.anchor, "values": values}], []
+        if len(values[0]) > block.clear_width:
+            raise ValueError(f"query '{block.query}' has {len(values[0]) - 1} columns of data; the block only has room for {block.clear_width - 1}")
+        return [{"range": block.anchor, "values": values}], [a1.rect(block.anchor, len(values), block.clear_width)]
     updates = []
     if block.title_cell:
         updates.append({"range": block.title_cell, "values": [[block.title]]})
