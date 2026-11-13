@@ -112,3 +112,34 @@ def test_top_lists_are_deterministic_at_the_cutoff(results):
     films = results["top_20_films"]
     ties = films[films["Total Rentals"] == films["Total Rentals"].min()]
     assert ties["Total Revenue"].is_monotonic_decreasing  # equal rentals: higher revenue first, then title
+
+
+# ---- the 2006-02-14 load batch ------------------------------------------------------------------------------------------
+
+BATCH_SQL = ("rentals_by_dow", "unreturned", "monthly_revenue", "revenue_by_month_category")
+
+
+def test_the_load_batch_is_what_the_documentation_says(settings):
+    """If the bundled database ever changes, this fails before the exclusion silently drops the wrong rows."""
+    from sakila_reporting.config import LOAD_BATCH_START
+    from sakila_reporting.db import scalar
+    p = {"start": LOAD_BATCH_START}
+    assert scalar(settings.db_path, "SELECT COUNT(*) FROM rental WHERE rental_date >= :start", p) == 182
+    assert scalar(settings.db_path, "SELECT COUNT(DISTINCT rental_date) FROM rental WHERE rental_date >= :start", p) == 1
+    assert scalar(settings.db_path, "SELECT COUNT(*) FROM rental WHERE rental_date >= :start AND return_date IS NOT NULL", p) == 0
+    assert scalar(settings.db_path, "SELECT COUNT(*) FROM payment WHERE payment_date >= :start", p) == 182
+
+
+@pytest.mark.parametrize("name", BATCH_SQL)
+def test_the_sql_literal_matches_the_load_batch_constant(settings, name):
+    from sakila_reporting.config import LOAD_BATCH_START
+    assert f"'{LOAD_BATCH_START}'" in (settings.sql_dir / f"{name}.sql").read_text(encoding="utf-8")
+
+
+def test_the_three_views_leave_the_load_batch_out_and_the_totals_still_reconcile(results):
+    assert (results["monthly_revenue"]["Month"] < "2006").all()
+    assert (results["revenue_by_month_category"]["Month"] < "2006").all()
+    dow = results["rentals_by_dow"].set_index("Day of Week")["Total Rentals"]
+    assert dow["Tuesday"] == 2281 and dow.sum() + 182 == int(results["total_rentals"].iloc[0, 0])
+    assert int(results["unreturned"].iloc[0, 0]) == 1
+    assert int(results["monthly_revenue"]["Currently Unreturned"].sum()) == 1

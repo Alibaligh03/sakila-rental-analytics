@@ -13,6 +13,7 @@ from typing import Callable
 
 import pandas as pd
 
+from .config import LOAD_BATCH_START
 from .db import rows, scalar
 from .layout import used_queries
 from .registry import Query, broken_order_by
@@ -76,8 +77,22 @@ def _executive_revenue_matches_payments(results, db) -> tuple[bool, str]:
     return abs(reported - independent) <= MONEY_TOLERANCE, f"reported {reported:,.2f} vs payments table {independent:,.2f}"
 
 
+# These month-based tables leave out the 2006-02-14 load batch, so they are compared with the other breakdowns plus the batch.
+EXCLUDES_LOAD_BATCH = {"revenue_by_month_category", "monthly_revenue"}
+
+
+def _load_batch_revenue(db) -> float:
+    return float(scalar(db, """
+        SELECT COALESCE(SUM(p.amount), 0) FROM payment p
+        JOIN rental r ON r.rental_id = p.rental_id JOIN inventory i ON i.inventory_id = r.inventory_id
+        JOIN film_category fc ON fc.film_id = i.film_id
+        WHERE p.payment_date >= :start""", {"start": LOAD_BATCH_START}))
+
+
 def _revenue_breakdowns_agree(results, db) -> tuple[bool, str]:
-    return _all_equal({name: _col_sum(results, name, col) for name, col in REVENUE_BREAKDOWNS}, MONEY_TOLERANCE)
+    batch = _load_batch_revenue(db)
+    return _all_equal({name: _col_sum(results, name, col) + (batch if name in EXCLUDES_LOAD_BATCH else 0.0)
+                       for name, col in REVENUE_BREAKDOWNS}, MONEY_TOLERANCE)
 
 
 def _executive_gap_explained(results, db) -> tuple[bool, str]:
@@ -95,10 +110,14 @@ def _executive_gap_explained(results, db) -> tuple[bool, str]:
     return abs(gap - unjoinable) <= MONEY_TOLERANCE, f"gap {gap:,.2f} vs {count} payment(s) without a rental totalling {unjoinable:,.2f}"
 
 
+def _load_batch_rentals(db) -> float:
+    return float(scalar(db, "SELECT COUNT(*) FROM rental WHERE rental_date >= :start", {"start": LOAD_BATCH_START}))
+
+
 def _rental_counts_agree(results, db) -> tuple[bool, str]:
     return _all_equal({
         "total_rentals": float(_first(results, "total_rentals")),
-        "rentals_by_dow": _col_sum(results, "rentals_by_dow", "Total Rentals"),
+        "rentals_by_dow + load batch": _col_sum(results, "rentals_by_dow", "Total Rentals") + _load_batch_rentals(db),
         "revenue_by_category": _col_sum(results, "revenue_by_category", "Number of Rentals"),
         "rentals_by_rating": _col_sum(results, "rentals_by_rating", "Total Rentals"),
         "staff_performance": _col_sum(results, "staff_performance", "Rentals Handled"),
@@ -162,7 +181,7 @@ def _actor_film_counts_correct(results, db) -> tuple[bool, str]:
 
 
 def _unreturned_matches(results, db) -> tuple[bool, str]:
-    independent = scalar(db, "SELECT COUNT(*) FROM rental WHERE return_date IS NULL")
+    independent = scalar(db, "SELECT COUNT(*) FROM rental WHERE return_date IS NULL AND rental_date < :start", {"start": LOAD_BATCH_START})
     return int(_first(results, "unreturned")) == independent, f"{int(_first(results, 'unreturned'))} reported vs {independent} by an independent query"
 
 

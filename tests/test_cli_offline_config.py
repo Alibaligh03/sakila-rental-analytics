@@ -44,7 +44,7 @@ def test_dry_run_writes_the_exact_updates_and_never_touches_google(tmp_path, mon
     assert run(tmp_path, "--dry-run") == 0
     day = next(p for p in (tmp_path / "out").iterdir() if p.name != "workbook")
     payloads = json.loads((day / "sheet_payloads.json").read_text(encoding="utf-8"))
-    assert sum(len(p["updates"]) for p in payloads.values()) == 51 + 19  # 51 data updates + the Executive Summary's 19 fixed labels
+    assert sum(len(p["updates"]) for p in payloads.values()) == 51 + 20  # 51 data updates + the Executive Summary's 20 fixed labels
 
 
 def test_publish_without_credentials_is_a_configuration_error(tmp_path):

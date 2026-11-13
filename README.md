@@ -264,16 +264,20 @@ actors, customers, inventory, rentals, payments and stores in a normalised schem
 
 Besides the five bursts, the database holds **182 rentals that all carry the same timestamp (2006-02-14 15:16:03)**, six months
 after the last real rental. All 182 are unreturned (158 customers have one), and they account for 182 of the 183 unreturned
-rentals in the database. They look like a data-load artefact rather than activity. The dashboard reports the database as it is, so
-the totals reconcile to the raw tables, but three figures need that context:
+rentals in the database. They look like a data-load artefact rather than activity, and left in they distort three views:
 
-| Figure | What the artefact does |
-|---|---|
-| Rentals by day of week | all 182 fall on a Tuesday, so Tuesday looks busiest (2,463 rentals); without them it is 2,281, in line with the other days |
-| Monthly trend | shows a 2006-02 month with 182 rentals and 182 unreturned, which is not a real month |
-| Currently Unreturned | 183, of which 182 are this batch; only 1 rental from the real period is unreturned |
+| View | Effect of the batch | What the dashboard does |
+|---|---|---|
+| Rentals by day of week | all 182 fall on a Tuesday, so Tuesday looks busiest (2,463 rentals; the real figure is 2,281, in line with the other days) | leaves the batch out |
+| Monthly trend and revenue by month & category | a 2006-02 month with 182 rentals and 182 unreturned, which is not a real month | leaves the batch out |
+| Currently Unreturned | 183, of which 182 are this batch | counts 1 (the only real unreturned rental) |
 
-With the default as-of date (or any date before 2006) the daily and month-to-date windows never reach the batch, so those tabs are unaffected.
+Every other total keeps the batch (16,044 rentals, 67,416.51 in revenue, the customer, store and film figures), so those still
+reconcile to the raw tables. A footnote under the KPI tiles on the Overview tab says which views leave it out. The cut-off is one
+constant, `LOAD_BATCH_START` in `sakila_reporting/config.py`; the same literal is in the four queries' SQL and a test keeps them in
+step. The consistency checks compare each of those views with the full total minus the batch, and a test fails if the bundled
+database stops matching this description (182 rentals, one timestamp, none returned). With the default as-of date (or any date
+before 2006) the daily and month-to-date windows never reach the batch.
 
 ## Key SQL techniques
 

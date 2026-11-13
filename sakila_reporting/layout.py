@@ -58,7 +58,9 @@ EXECUTIVE_SUMMARY: list[Block] = [
     Label("A1", "Summary of Business"), Label("B3", "KPI"), Label("C3", "Value"),
     Label("B4", "Total Revenue"), Label("B5", "Total Payments"), Label("B6", "Avg Payment"), Label("B7", "Total Rentals"),
     Label("B8", "Total Customers"), Label("B9", "Active Customers"), Label("B10", "Total Films"), Label("B11", "Currently Unreturned"),
-    Label("B12", "Last Updated"), Label("A14", "Monthly Report"), Label("A23", "Days Insights"), Label("A34", "Returns Tracking"),
+    Label("B12", "Last Updated"),
+    Label("B13", "Day of week, monthly trend and unreturned leave out the 182 rentals loaded on 2006-02-14 (see README); other totals include them."),
+    Label("A14", "Monthly Report"), Label("A23", "Days Insights"), Label("A34", "Returns Tracking"),
     Label("B36", "KPI"), Label("C36", "Value"), Label("B37", "Late Returns count"), Label("B38", "Avg Days Overdue"),
     Value("C4", "executive_summary", 0, 0),   # Total Revenue
     Value("C5", "executive_summary", 0, 1),   # Total Payments

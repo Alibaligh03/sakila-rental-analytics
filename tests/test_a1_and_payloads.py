@@ -69,7 +69,8 @@ def test_the_dashboard_layout_has_not_moved(results):
     assert data == ["C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "B16", "B25", "C37", "C38",
                     "J1", "K3", "J8", "K10", "Q1", "Q3", "W1", "W3"]
     assert [u["range"] for u in built["Revenue & Finance"].updates] == ["A1", "B3", "A21", "B23", "F1", "F3", "F7", "F9", "M1", "M3"]
-    assert sum(len(p.updates) for p in built.values()) == 51 + 19  # the 51 data updates, plus the 19 fixed labels of the Executive Summary
+    # the 51 data updates, plus the 20 fixed labels of the Executive Summary (one of them is the load-batch footnote)
+    assert sum(len(p.updates) for p in built.values()) == 51 + 20
 
 
 def test_the_timestamp_cell_uses_the_run_start(results):
@@ -80,7 +81,8 @@ def test_the_timestamp_cell_uses_the_run_start(results):
 def test_the_monthly_block_is_written_one_metric_per_row(results):
     update = next(u for u in build_payloads(results, RUN)["Overview"].updates if u["range"] == "B16")
     assert [row[0] for row in update["values"]] == results["monthly_revenue"].columns.tolist()
-    assert len(update["values"]) == 6 and all(len(row) == 6 for row in update["values"])
+    months = len(results["monthly_revenue"])   # one column per month, plus the label column (the 2006-02 load batch is not a month)
+    assert len(update["values"]) == 6 and all(len(row) == 1 + months for row in update["values"])
 
 
 def test_a_missing_query_leaves_its_blocks_untouched_instead_of_blanking_them(results):

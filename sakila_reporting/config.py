@@ -20,6 +20,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 # role of "today"; this default sits just after the last continuous burst, where both the daily backfill and the like-for-like
 # month windows have data.
 DEFAULT_AS_OF = date(2005, 8, 24)
+# Rentals and payments dated on or after this day are the single 2006-02-14 load batch (182 rentals, all unreturned). The
+# day-of-week chart, the monthly trend and the unreturned count leave them out; every other total keeps them (see the README).
+# The same literal is written in those queries' SQL, and a test keeps the two in step.
+LOAD_BATCH_START = "2006-01-01"
 RUN_MODES = ("daily", "first-of-month")
 QUERY_MODES = ("split", "cte")
 
