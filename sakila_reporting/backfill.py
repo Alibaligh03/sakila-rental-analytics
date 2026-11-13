@@ -5,7 +5,7 @@ every missing day this inserts a column (or two, for the per-store block) at col
 it, and writes the day's date into the stamp cell.
 
 Both blocks live on ONE tab, one under the other, each with its own columns. A whole-column insert would shift both, so the insert is an
-`insertRange` over the rows of ONE block only: it moves that block's cells to the right and nothing else. The formats of the neighbouring
+`insertRange` over the rows of ONE block only: it moves that block's cells to the right and nothing else. The formats of the neighboring
 column are copied onto the new one in the same request, and for the per-store block the new date cell is merged across its pair.
 
 The control flow is deliberately defensive, because the tab itself is the only record of what has been done:
@@ -40,7 +40,7 @@ COL = digest.FIRST_DAY_COL
 
 
 def get_val(value):
-    """A cell value as a JSON-serialisable Python value."""
+    """A cell value as a JSON-serializable Python value."""
     if isinstance(value, pd.Timestamp):
         return value.strftime("%Y-%m-%d")
     try:
@@ -216,7 +216,7 @@ def _range(sheet, block: DayBlock, first_col: int, n: int) -> dict:
 
 
 def insert_day(sheet, block: DayBlock) -> None:
-    """One atomic request: move the block's cells right, copy the neighbouring column's formats onto the new column(s), and merge the new
+    """One atomic request: move the block's cells right, copy the neighboring column's formats onto the new column(s), and merge the new
     date cell across the pair. It is not wrapped in a retry."""
     n = block.n_columns
     requests = [{"insertRange": {"range": _range(sheet, block, COL, n), "shiftDimension": "COLUMNS"}},

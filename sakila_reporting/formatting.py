@@ -1,6 +1,6 @@
-"""The look of the spreadsheet, modelled on a daily KPI digest: Lato 10, centred values, no gridlines, a bold coloured header band, a
-bold title band above each block, thin vertical borders, compact K / M numbers, and values coloured green or red by whether they beat
-the neighbouring period. The accent colour is purple.
+"""The look of the spreadsheet, modeled on a daily KPI digest: Lato 10, centered values, no gridlines, a bold colored header band, a
+bold title band above each block, thin vertical borders, compact K / M numbers, and values colored green or red by whether they beat
+the neighboring period. The accent color is purple.
 
 Everything here is a Sheets API request built from the same layout the data is written with, so the formatting always lines up with
 the data. The builders are pure functions (no network) and are tested as such; `apply_design` sends them.
@@ -8,8 +8,8 @@ the data. The builders are pure functions (no network) and are tested as such; `
 Applying is idempotent: for every tab it first clears the old formatting and conditional-format rules, then applies the design again,
 so running it twice (or after the layout changed) never leaves leftovers or duplicates.
 
-Conditional formats (weekday header colours, green / red) are rules rather than painted colours: the backfill inserts a column at C
-every day, and a painted colour would stay behind while the dates moved right, whereas a rule reads each column's own values.
+Conditional formats (weekday header colors, green / red) are rules rather than painted colors: the backfill inserts a column at C
+every day, and a painted color would stay behind while the dates moved right, whereas a rule reads each column's own values.
 """
 from __future__ import annotations
 
@@ -27,15 +27,15 @@ from .tabs import SEGMENT_SPECS
 PURPLE = {"red": 0.54, "green": 0.31, "blue": 0.78}      # the accent: header and title bands
 WHITE = {"red": 1.0, "green": 1.0, "blue": 1.0}
 INK = {"red": 0.0, "green": 0.0, "blue": 0.0}
-GREEN = {"red": 0.718, "green": 0.882, "blue": 0.804}    # better than the neighbouring period
-RED = {"red": 0.957, "green": 0.780, "blue": 0.765}      # worse than the neighbouring period
+GREEN = {"red": 0.718, "green": 0.882, "blue": 0.804}    # better than the neighboring period
+RED = {"red": 0.957, "green": 0.780, "blue": 0.765}      # worse than the neighboring period
 BLUE = {"red": 0.239, "green": 0.522, "blue": 0.776}     # Saturday header
 BLUE_TEXT = {"red": 0.965, "green": 0.973, "blue": 0.976}
 YELLOW = {"red": 0.988, "green": 0.910, "blue": 0.698}   # Sunday header
 NAME_FILL = {"red": 1.0, "green": 0.949, "blue": 0.800}  # store names
 LINE = {"red": 0.0, "green": 0.0, "blue": 0.0}
 
-# Compact numbers: 1.5K, 2.30M ... The digest this is modelled on shows every large figure this way.
+# Compact numbers: 1.5K, 2.30M ... The digest this is modeled on shows every large figure this way.
 COMPACT_INT = '[>=1000000]0.00,,"M";[>=1000]0.00,"K";0'
 COMPACT_DEC = '[>=1000000]0.00,,"M";[>=1000]0.00,"K";0.00'
 FULL = {"int": "#,##0", "money": "#,##0.00", "dec": "#,##0.00", "pct": "0.00%"}
@@ -82,17 +82,17 @@ def _side(style="SOLID") -> dict:
 
 
 def header(sheet_id: int, ref: str) -> dict:
-    """The coloured header band: bold white text, centred."""
+    """The colored header band: bold white text, centered."""
     return _repeat(sheet_id, ref, backgroundColor=PURPLE, horizontalAlignment="CENTER", verticalAlignment="MIDDLE", wrapStrategy="WRAP", **_text(True, WHITE))
 
 
 def band(sheet_id: int, ref: str) -> dict:
-    """A title band above a block: the same colour, one size up."""
+    """A title band above a block: the same color, one size up."""
     return _repeat(sheet_id, ref, backgroundColor=PURPLE, horizontalAlignment="LEFT", verticalAlignment="MIDDLE", **_text(True, WHITE, 11))
 
 
 def title_band(sheet_id: int, row: int, last_col: str = "C") -> list[dict]:
-    """A block's title: a band over the label columns only (A to C), merged, centred, taller than a normal row. The legend sits beside
+    """A block's title: a band over the label columns only (A to C), merged, centered, taller than a normal row. The legend sits beside
     it in plain text."""
     ref = f"A{row}:{last_col}{row}"
     fill = _repeat(sheet_id, ref, backgroundColor=PURPLE, horizontalAlignment="CENTER", verticalAlignment="MIDDLE", **_text(True, WHITE, 11))
@@ -124,7 +124,7 @@ def verticals(sheet_id: int, ref: str) -> dict:
 
 def day_borders(sheet_id: int, first_row: int, last_row: int, n_days: int, width: int) -> list[dict]:
     """Vertical lines for a day-by-day block. With one column per day every column gets its line; with two (the per-store block) the
-    lines fall BETWEEN DAYS only, so a day's two stores read as one unit, as in the digest this is modelled on."""
+    lines fall BETWEEN DAYS only, so a day's two stores read as one unit, as in the digest this is modeled on."""
     last = _last(n_days, width)
     table = f"B{first_row}:{last}{last_row}"
     if width == 1:
@@ -160,7 +160,7 @@ def row_height(sheet_id: int, rows: int, pixels: int, first: int = 1) -> dict:
 
 def sheet_props(sheet_id: int, frozen_rows: int = 0, frozen_cols: int = 0) -> dict:
     props = {"sheetId": sheet_id, "gridProperties": {"frozenRowCount": frozen_rows, "frozenColumnCount": frozen_cols, "hideGridlines": True}}
-    fields = "tabColorStyle,gridProperties.frozenRowCount,gridProperties.frozenColumnCount,gridProperties.hideGridlines"  # tabColorStyle unset = no colour
+    fields = "tabColorStyle,gridProperties.frozenRowCount,gridProperties.frozenColumnCount,gridProperties.hideGridlines"  # tabColorStyle unset = no color
     return {"updateSheetProperties": {"properties": props, "fields": fields}}
 
 
@@ -204,7 +204,7 @@ def sign_rules(sheet_id: int, ref: str) -> list[dict]:
 
 
 def beats_rules(sheet_id: int, ref: str, cell: str, other: str) -> list[dict]:
-    """Green where a value is higher than the one it is compared with, red where it is lower. Blank cells are never coloured.
+    """Green where a value is higher than the one it is compared with, red where it is lower. Blank cells are never colored.
     `cell` is the top-left cell of `ref`; `other` is the cell it is compared with, relative to it (for example 'D11' for 'C11')."""
     both = f"ISNUMBER({cell}),ISNUMBER({other})"
     return [_rule(sheet_id, ref, f"=AND({both},{cell}>{other})", GREEN), _rule(sheet_id, ref, f"=AND({both},{cell}<{other})", RED)]
@@ -351,8 +351,8 @@ def _last(n_days: int, width: int) -> str:
 
 def _daily_block(sheet_id: int, width: int, n_days: int, title_row: int, date_row: int, first_row: int, last_row: int) -> list[dict]:
     """A day-by-day block: title band, header with the dates, KPI rows, formatted for the days that exist (a column the backfill inserts
-    later copies its neighbour's formats). Colour rules start in column C, one column left of the data, so that a column inserted at D
-    falls INSIDE their range and is coloured too."""
+    later copies its neighbor's formats). Color rules start in column C, one column left of the data, so that a column inserted at D
+    falls INSIDE their range and is colored too."""
     last = _last(n_days, width)
     reqs = title_band(sheet_id, title_row)
     reqs += [legend(sheet_id, f"D{title_row}:{a1.col_to_letters(digest.FIRST_DAY_COL + 8)}{title_row}"),
@@ -381,7 +381,7 @@ def group_borders(sheet_id: int, first_row: int, last_row: int, groups: list[tup
 
 def _monthly_total(sheet_id: int, earlier: int = 3) -> list[dict]:
     """'Rental Insights': this month so far, the same days last month and the % Change in one table; the earlier months (as many as have
-    activity, up to three) in a second table after a gap column, as in the digest this is modelled on. Nothing is coloured except the
+    activity, up to three) in a second table after a gap column, as in the digest this is modeled on. Nothing is colored except the
     % Change text."""
     d = digest
     reqs = title_band(sheet_id, d.M_TITLE)
@@ -405,7 +405,7 @@ def _monthly_total(sheet_id: int, earlier: int = 3) -> list[dict]:
 
 def _monthly_stores(sheet_id: int) -> list[dict]:
     """'Rental Insights (STORE 1 & STORE 2)': each period (MTD, SPLM, % Change) is merged over the two stores, whose names repeat on a pale
-    row underneath. Lines fall between the periods only. The % Change text is coloured per store."""
+    row underneath. Lines fall between the periods only. The % Change text is colored per store."""
     d = digest
     names_row = d.MS_NAMES
     reqs = title_band(sheet_id, d.MS_TITLE)

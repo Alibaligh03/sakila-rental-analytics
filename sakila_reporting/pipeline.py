@@ -8,7 +8,7 @@
     analytic tabs
  6. clear the cache if every query succeeded
 
-Two behaviours, selected with --strict:
+Two behaviors, selected with --strict:
 
  parity (default)  a failed query leaves its block empty and the run carries on to write everything that did succeed; the
                    checks report problems loudly but do not stop the writes; a Sheets error that survives the retries stops the
@@ -224,7 +224,7 @@ def _write_everything(spreadsheet, frames, report, as_of, mode, lookback, run_st
             for m in res.mismatches:
                 LOG.error("read-back mismatch in '%s': %s", res.sheet, m)
                 ok = False
-    # the look of the sheet (header bands, number formats, widths, weekend colours). Cosmetic, so a failure only warns.
+    # the look of the sheet (header bands, number formats, widths, weekend colors). Cosmetic, so a failure only warns.
     if options.publish and (options.create_tabs or options.format_tabs):
         formatting.apply_design(spreadsheet, frames, retry)
     return ok

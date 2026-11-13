@@ -80,12 +80,12 @@ def test_the_daily_header_is_blue_on_saturday_and_yellow_on_sunday_by_rules_that
     assert sorted((formula(r), r["ranges"][0]["startRowIndex"] + 1) for r in weekday) == [
         ("=AND(ISNUMBER(C$28),WEEKDAY(C$28)=1)", 28), ("=AND(ISNUMBER(C$28),WEEKDAY(C$28)=7)", 28),
         ("=AND(ISNUMBER(C$3),WEEKDAY(C$3)=1)", 3), ("=AND(ISNUMBER(C$3),WEEKDAY(C$3)=7)", 3)]  # Sheets: Sunday 1 ... Saturday 7; a blank date is no weekday
-    colours = {formula(r)[-2]: r["booleanRule"]["format"]["backgroundColor"] for r in weekday}
-    assert colours == {"7": f.BLUE, "1": f.YELLOW}
+    colors = {formula(r)[-2]: r["booleanRule"]["format"]["backgroundColor"] for r in weekday}
+    assert colors == {"7": f.BLUE, "1": f.YELLOW}
 
 
-def test_colour_rules_start_one_column_left_of_the_data_so_an_inserted_column_is_inside_them(frames):
-    """The backfill inserts at column D. A rule that began AT D would be pushed right and leave the new column uncoloured."""
+def test_color_rules_start_one_column_left_of_the_data_so_an_inserted_column_is_inside_them(frames):
+    """The backfill inserts at column D. A rule that began AT D would be pushed right and leave the new column uncolored."""
     checked = 0
     for rule in rules(digest_reqs(frames)):
         if "WEEKDAY" in formula(rule) or "ISNUMBER" in formula(rule):
@@ -94,7 +94,7 @@ def test_colour_rules_start_one_column_left_of_the_data_so_an_inserted_column_is
     assert checked == 8
 
 
-def test_each_day_is_coloured_green_or_red_against_the_previous_one_and_blanks_stay_white(frames):
+def test_each_day_is_colored_green_or_red_against_the_previous_one_and_blanks_stay_white(frames):
     beats = sorted(formula(r) for r in rules(digest_reqs(frames)) if "ISNUMBER" in formula(r) and "WEEKDAY" not in formula(r))
     assert beats == ["=AND(ISNUMBER(C30),ISNUMBER(E30),C30<E30)", "=AND(ISNUMBER(C30),ISNUMBER(E30),C30>E30)",  # per store: two columns to the right
                      "=AND(ISNUMBER(C4),ISNUMBER(D4),C4<D4)", "=AND(ISNUMBER(C4),ISNUMBER(D4),C4>D4)"]          # daily: the next column
@@ -115,7 +115,7 @@ def test_the_sunday_header_has_dark_text_so_it_stays_readable_on_yellow(frames):
     assert sunday["booleanRule"]["format"]["textFormat"]["foregroundColor"] == f.INK
 
 
-def test_the_monthly_blocks_are_plain_except_for_the_colour_of_the_percent_change_text(frames):
+def test_the_monthly_blocks_are_plain_except_for_the_color_of_the_percent_change_text(frames):
     """No fill anywhere inside the monthly tables; only the % Change text turns green above zero and red below it."""
     monthly = [r for r in rules(digest_reqs(frames)) if r["ranges"][0]["startRowIndex"] + 1 >= digest.M_HEAD]
     assert monthly and all("backgroundColor" not in r["booleanRule"]["format"] for r in monthly)
@@ -188,7 +188,7 @@ class Recorder:
 
 
 def test_applying_the_design_resets_each_tab_first_so_running_it_twice_changes_nothing(frames):
-    book = Recorder({digest.TAB: 2})  # the tab already has two colour rules
+    book = Recorder({digest.TAB: 2})  # the tab already has two color rules
     assert f.apply_design(book, frames, {"retries": 1, "delay": 0}) is True
     requests = book.sent[0]["requests"]
     assert [r["deleteConditionalFormatRule"]["index"] for r in requests if "deleteConditionalFormatRule" in r] == [0, 0]  # removed, not duplicated

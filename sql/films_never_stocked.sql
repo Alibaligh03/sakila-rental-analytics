@@ -1,4 +1,4 @@
--- films_never_stocked: Films in the catalogue that have no inventory copy in any store, so they can never be rented.
+-- films_never_stocked: Films in the catalog that have no inventory copy in any store, so they can never be rented.
 -- This replaces the old "dead inventory (never rented)" list. Those 42 films were never rented because they were never
 -- stocked, which is not the same as stocked and unrented: only 1 of 4,581 inventory copies has never been rented.
 SELECT

@@ -82,7 +82,7 @@ def compute_lookback_days(spreadsheet, targets, yesterday: date, retry_kwargs: d
 def get_missing_days(sheet, stamp_cell: str, up_to_day: date, lookback_days: int, retry_kwargs: dict | None = None) -> list[date]:
     """The days this sheet still needs, oldest first: from the day after its last-filled date up to `up_to_day`.
 
-    If the date cannot be read, only `up_to_day` is returned (the old single-day behaviour). If more days are missing than
+    If the date cannot be read, only `up_to_day` is returned (the old single-day behavior). If more days are missing than
     the lookback window covers, only the most recent ones that the queries actually returned are kept.
     """
     try:

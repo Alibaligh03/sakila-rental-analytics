@@ -34,7 +34,7 @@ def parse_args(argv=None) -> argparse.Namespace:
     p.add_argument("--no-cache", action="store_true", help="ignore and do not write the per-query cache")
     p.add_argument("--only", nargs="+", metavar="QUERY", help="run only these queries (names of the files in sql/)")
     p.add_argument("--create-tabs", action="store_true", help="with --publish: create the missing tabs (never touches existing ones)")
-    p.add_argument("--format-tabs", action="store_true", help="with --publish: (re)apply the design: header bands, number formats, widths, weekend colours")
+    p.add_argument("--format-tabs", action="store_true", help="with --publish: (re)apply the design: header bands, number formats, widths, weekend colors")
     p.add_argument("--workers", type=int, help="parallel queries (default: MAX_WORKERS or 5)")
     p.add_argument("--retry-mode", choices=RETRY_MODES, help="all: retry any API error (default). transient: only 429 and 5xx, with backoff")
     p.add_argument("--workbook", help="path of the local workbook file (default: output/workbook/workbook.json)")

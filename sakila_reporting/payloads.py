@@ -30,7 +30,7 @@ def clean_frame(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def to_python(value):
-    """A JSON-serialisable value: dates as dd/mm/yyyy, numpy scalars as plain Python numbers."""
+    """A JSON-serializable value: dates as dd/mm/yyyy, numpy scalars as plain Python numbers."""
     if isinstance(value, pd.Timestamp):
         return value.strftime("%d/%m/%Y")
     try:

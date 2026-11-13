@@ -59,7 +59,7 @@ LEGENDS = {D_TITLE: {"D": "BLUE IS SATURDAY", "F": "YELLOW IS SUNDAY", "H": "GRE
 OLD_LEGEND_CELLS = (f"B{D_LEGEND}", f"B{M_TITLE + 1}")  # an earlier layout wrote italic legends here; they are cleared
 TITLES = {D_TITLE: "Rental Insights (Daily)", S_TITLE: "STORE 1 & STORE 2", M_TITLE: "Rental Insights",
           MS_TITLE: "Rental Insights (STORE 1 & STORE 2)", SEG_TITLE: "Rental Insights (Segments)"}
-STORE_LABELS = tuple(s.upper() for s in STORES)  # shown in capitals, like the channel names of the digest this is modelled on
+STORE_LABELS = tuple(s.upper() for s in STORES)  # shown in capitals, like the channel names of the digest this is modeled on
 
 
 def static_cells() -> list[dict]:

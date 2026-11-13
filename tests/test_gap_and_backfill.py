@@ -136,7 +136,7 @@ class Recorder:
         self.sent.append(body["requests"])
 
 
-def test_inserting_a_day_is_one_request_that_moves_one_block_and_copies_the_neighbours_formats():
+def test_inserting_a_day_is_one_request_that_moves_one_block_and_copies_the_neighbors_formats():
     daily, stores = Recorder(), Recorder()
     backfill.insert_day(daily, backfill.DAILY)
     backfill.insert_day(stores, backfill.DAILY_STORES)

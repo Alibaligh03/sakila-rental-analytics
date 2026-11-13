@@ -50,7 +50,7 @@ def test_sort_declaration_is_read_from_the_sql():
     assert column_aliases('SELECT 1 AS "One", 2 AS "Two"') == {"One", "Two"}
 
 
-# Known facts about the bundled Sakila data. They pin the behaviour the old script got wrong.
+# Known facts about the bundled Sakila data. They pin the behavior the old script got wrong.
 def test_top_customers_by_spend_really_are_the_top_spenders(results):
     top = results["top_customers_by_spend"]
     assert top.iloc[0]["Customer Name"] == "KARL SEAL"

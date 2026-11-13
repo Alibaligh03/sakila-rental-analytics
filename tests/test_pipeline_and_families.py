@@ -1,4 +1,4 @@
-"""The pipeline's own steps and behaviours, and an independent recomputation of the windowed query families.
+"""The pipeline's own steps and behaviors, and an independent recomputation of the windowed query families.
 
 The family tests rebuild every number from the raw Sakila tables with pandas (no SQL from sql/), so a mistake in a query's join,
 window or grouping cannot be mirrored by the test.
