@@ -101,17 +101,17 @@ every other block where it is.
 
 ### Design
 
-The look follows a daily KPI digest, in purple: Lato 10 with centred values, no gridlines and **nothing frozen**, a bold header band and
+The look follows a daily KPI digest, in purple: Lato 10 with centered values, no gridlines and **nothing frozen**, a bold header band and
 a title band over each block, thin vertical borders, compact figures (`2.52K`, `1.30M`), and two-decimal percentages.
 
-- **Daily blocks:** every day is coloured **green or red** by whether it beat the previous day, and the date header is **blue on
+- **Daily blocks:** every day is colored **green or red** by whether it beat the previous day, and the date header is **blue on
   Saturdays and yellow on Sundays**.
-- **Monthly blocks:** plain white inside; only the **% Change** column is coloured, its text green above zero and red below.
+- **Monthly blocks:** plain white inside; only the **% Change** column is colored, its text green above zero and red below.
 - **Stores:** a pale-yellow bold row of store names under the dates (daily) or under each merged period heading (monthly); in both, the
   vertical lines fall between days / periods and never between a day's two stores.
 
-The colours are conditional-format rules, not painted cells, and they start one column to the left of the data so that a column
-inserted at D falls inside them: the backfill inserts a column every day, and a painted colour would stay behind where a rule keeps
+The colors are conditional-format rules, not painted cells, and they start one column to the left of the data so that a column
+inserted at D falls inside them: the backfill inserts a column every day, and a painted color would stay behind where a rule keeps
 following the data.
 
 ```bash
@@ -135,13 +135,13 @@ wrong:
   cannot become a huge query). The cell may be ISO text, a `dd/mm/yyyy` a person typed, or the serial number Sheets returns.
 - **One column per missing day, oldest first,** inserted at column D so the newest day is always on the left; every
   formula in the shifted columns is re-pointed (the workbook stand-in implements this, as Sheets does).
-- **The insert is never retried.** It is one atomic request (move the block's cells right, copy the neighbour's formats, merge the
+- **The insert is never retried.** It is one atomic request (move the block's cells right, copy the neighbor's formats, merge the
   date pair), but if its reply is lost the code cannot know whether it happened. After a failed insert the stamp is read again: a stamp that
   went from a date to blank proves the columns had already moved, so the blank column is removed; otherwise nothing is
   deleted, because deleting a column that holds a real day would destroy data.
 - **Empty days: a real zero, or not stamped at all.** A day with no rows is written as zeros only if a *later* day in the same
   catch-up has rows (then it really had no activity; Sakila has quiet stretches between its bursts of rentals). If nothing later has
-  rows either, the data may simply not be loaded yet, and stamping it would mark the day covered while leaving it blank for ever: the
+  rows either, the data may simply not be loaded yet, and stamping it would mark the day covered while leaving it blank forever: the
   inserted columns are removed and the run stops, leaving the stamp on the last complete day. A query that *failed* never produces
   zeros: its cells stay blank for a later run.
 - **Fresh dicts on every write attempt.** gspread rewrites each item's `range` in place, so re-sending the same list fails every
@@ -234,7 +234,7 @@ sakila-rental-analytics/
 │   ├── digest.py            #   where every block of the Daily Digest tab sits (rows, labels, titles)
 │   ├── gap.py, backfill.py  #   gap detection; one inserted column per missing day in a block, with its failure handling
 │   ├── tabs.py, windows.py  #   monthly blocks with % Change, segment tables; the date windows
-│   ├── formatting.py        #   the look: bands, number formats, widths, green/red and weekday colours
+│   ├── formatting.py        #   the look: bands, number formats, widths, green/red and weekday colors
 │   ├── fetch.py, cache.py   #   parallel queries, failure isolation, heartbeat; per-query atomic cache
 │   ├── checks.py            #   the 21 reconciliation checks
 │   ├── layout.py, payloads.py #  analytics dashboard: where each result goes, and the exact cell updates
@@ -253,7 +253,7 @@ sakila-rental-analytics/
 ## Dataset
 
 The **Sakila** database is a sample dataset originally created by MySQL, representing a DVD rental store: films,
-actors, customers, inventory, rentals, payments and stores in a normalised schema.
+actors, customers, inventory, rentals, payments and stores in a normalized schema.
 
 - 1,000 films across 16 categories
 - 599 customers across multiple countries
@@ -322,11 +322,11 @@ what was added:
 | Month tabs | like-for-like month-to-date windows (and whole-month mode); per-store tabs; columns placed by month and store, not by row position |
 | Segmentation | customer, country and rating split tables, each under its own title band |
 | Queries | 34 new queries with bound date parameters; `split` and `cte` variants that provably agree |
-| Run | local workbook that keeps its state between runs; `--as-of`, `--mode`, `--query-mode`, `--strict`; parity (default) and strict behaviours side by side |
+| Run | local workbook that keeps its state between runs; `--as-of`, `--mode`, `--query-mode`, `--strict`; parity (default) and strict behaviors side by side |
 | Retries | `all` (any API error, fixed delay) and `transient` (429/5xx, exponential backoff); the insert is never retried; fresh dicts per attempt |
 | Tests | from about 100 to about 200; the new families are verified against an independent pandas recomputation |
 | Layout | 14 tabs reduced to 5: one **Daily Digest** tab with the daily, per-store, monthly and segment blocks stacked, plus the analytics dashboard (Executive Summary and Operations share **Overview**) |
-| Design | purple digest-style formatting, green/red against the previous day, a coloured **% Change** column, blue Saturday / yellow Sunday headers, no frozen panes; built from the layout and unit tested |
+| Design | purple digest-style formatting, green/red against the previous day, a colored **% Change** column, blue Saturday / yellow Sunday headers, no frozen panes; built from the layout and unit tested |
 
 Two bugs in this repository's own publisher and backfill were found while building the workbook stand-in, and are fixed with
 tests: the publisher re-sent the same update dicts that gspread rewrites in place (so a retry, or the read-back, would have seen
